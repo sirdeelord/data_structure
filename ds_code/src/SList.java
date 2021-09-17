@@ -1,4 +1,5 @@
 public class SList {
+    /** nested class */
     public static class IntNode {
         public int item;
         public IntNode next;
