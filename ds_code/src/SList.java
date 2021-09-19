@@ -27,7 +27,6 @@ public class SList<T> {
         size = 1;
     }
 
-
     /** add x to the first item in the list */
     public void addFirst(T x) {
         sentinel.next = new Node(x, sentinel.next);
@@ -59,10 +58,13 @@ public class SList<T> {
     public static void main(String[] args) {
         /*create a list of one integer, namely 10 */
         SList<Integer> L = new SList<>();
+        SList<String> s = new SList<>("Saddy");
         L.addFirst(10);
         L.addFirst(5);
         L.addLast(20);
+        
         System.out.println(L.getFirst());
+        System.out.println(s.getFirst());
     }
 }
 
