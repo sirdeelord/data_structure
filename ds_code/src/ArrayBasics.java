@@ -16,7 +16,5 @@ public class ArrayBasics {
 
         int[] b = {9, 10, 11};
         System.arraycopy(b, 0, x, 3, 2);
-
-    }
-    
+    }  
 }
