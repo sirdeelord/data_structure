@@ -28,7 +28,7 @@ public class AList {
     }
 
     /** return the item from the back of the list */
-    public int getLast(int x) {
+    public int getLast() {
         return items[size - 1];
     }
 
@@ -40,6 +40,14 @@ public class AList {
     /** returns the number in the list */
     public int size() {
         return size; 
+    }
+
+    /** deletes item from back of the list and
+      * returns deleted item. */
+      public int removeLast() {
+        int x = getLast();
+        size = size - 1;
+        return x;
     }
     
 }
