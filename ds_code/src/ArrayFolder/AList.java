@@ -6,8 +6,8 @@ package ArrayFolder;
 // item: [6 9 -1 2 0 0 0 0...]
 // size: 4
 public class AList {
-    int [] items;
-    int size;
+    private int [] items;
+    private int size;
 
     /** invariants: 
      *  addlast: the next item we want to add, will go into position size
