@@ -58,7 +58,7 @@ public class AListTest {
     @Test
     public void testMegaInsert() {
         AList L = new AList();
-        int N = 1000000;
+        int N = 1000;
         for (int i = 0; i < N; i += 1) {
             L.addLast(i);
         }
