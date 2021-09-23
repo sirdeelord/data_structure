@@ -1,13 +1,17 @@
 package ArrayFolder;
 
+import Interfaces.ListInterface;
+
 /** array based list
  */
 //       0 1  2 3 4 5 6 7
 // item: [6 9 -1 2 0 0 0 0...]
 // size: 4
-public class AList<T> {
+public class AList<T> implements ListInterface<T> {
     private T [] items;
     private int size;
+
+    private static int RFACTOR = 2;
 
     /** invariants: 
      *  addlast: the next item we want to add, will go into position size
