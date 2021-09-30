@@ -5,15 +5,15 @@ public class InsertionSort {
 
     public void iSort(int arr[]) {
         int pos;
-        int val;
+        int temp;
         for (int i = 0; i < arr.length; i++) {
-            val = arr[i];
-            pos = i;
-            while (pos >= 0 && arr[pos - 1] > val) {
-                arr[pos] = arr[pos - 1];
+            temp = arr[i];
+            pos = i - 1;
+            while (pos >= 0 && arr[pos] > temp) {
+                arr[pos + 1] = arr[pos];
                 pos = pos - 1;
             }
-            arr[pos] = val;
+            arr[pos + 1] = temp;
         }
     }
 }
