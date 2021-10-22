@@ -1,25 +1,21 @@
+class Node {
+    int data;
+    Node next;
+}
+
 public class LinkedList {
-    public static void main(String[] args) {
+    Node head;
 
-        //linked list implementation
+    public void addFirst(int val) {
+        Node newNode = new Node();
+        newNode.data = val;
+        newNode.next = head;
 
-        Node head, middle, last;
-        head = new Node();
-        middle = new Node();
-        last = new Node();
+        head = newNode;
+    }
 
-        //add data
-        head.data = 10;
-        middle.data = 20;
-        last.data = 30;
-
-        //link the list
-        head.next = middle;
-        middle.next = last;
-        last.next = null;
-
+    public void print() {
         Node temp = head;
-
         //print the linkedList
         while (temp != null) {
             System.out.println(temp.data);
@@ -27,8 +23,14 @@ public class LinkedList {
         }
     }
 
-    public static class Node {
-        int data;
-        Node next;
+    public static void main(String[] args) {
+
+        LinkedList list = new LinkedList();
+
+        list.addFirst(10);
+        list.addFirst(20);
+        list.addFirst(30);
+        
+        list.print();
     }
 }
